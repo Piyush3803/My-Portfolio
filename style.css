@@ -1,0 +1,394 @@
+*{
+  margin: 0;
+  font-family: poppins, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html.no-scroll{
+  overflow: hidden;
+}
+
+.menu{
+  display: flex;
+  position: relative;
+  float: right;
+  right: 50px;
+  top: 30px;
+}
+
+.menu .top{
+  position: absolute;
+  background-color: #000;
+  height: 4px;
+  width: 35px;
+  border-radius: 2px;
+  top: 9px;
+  transition: 0.3s ease;
+}
+
+.menu .middle{
+  position: absolute;
+  background-color: #000;
+  height: 4px;
+  width: 35px;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.menu .bottom{
+  position: absolute;
+  background-color: #000;
+  height: 4px;
+  width: 35px;
+  border-radius: 2px;
+  bottom: 5px;
+  transition: 0.3s ease;
+}
+
+.navbar{
+  background-color: #7d2cd4;
+  position: absolute;
+  height: 100vh;
+  width: 50vw;
+  padding: 50px;
+  padding-top: 100px;
+  text-align: center;
+  transition: all .5s;
+  left: -100%;
+}
+
+.navbar a{
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding-block: 40px;
+}
+
+.navbar.show{
+  left: 0;
+}
+
+header{
+  padding: 20px;
+  height: 100vh;
+  background-color: #fbfafc;
+  color: #000;
+  text-align: center;
+  padding-top: 250px;
+  padding-left: 20px;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+header span{
+  color: #7d2cd4;
+}
+
+.about{
+  background-color: #7d2cd4;
+  color: #fff;
+  height: 50vh;
+  width: 100vw;
+  padding: 30px;
+}
+
+.about h1{
+  padding: 10px;
+}
+
+.about p{
+  padding: 10px;
+  line-height: 30px;
+}
+
+.skills{
+  background-color: #fbfafc;
+  padding: 40px; 
+}
+
+.skills li{
+  list-style-type: none;
+  margin-block: 30px;
+} 
+
+.skills .percentage{
+  position: relative;
+  float: right;
+  margin-top: -25px;
+}
+
+.bar{
+  display: flex;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #d2cae6; 
+  overflow: hidden;
+  height: 15px;
+  transition: all 0.3s cubic-bezier(.25, .8, .21, 1);
+  
+}
+.bar span{
+  background-color: #7d2cd4;
+  height: 15px;
+  border-radius: 15px;
+  float: left;
+}
+
+.html{
+  width: 90%;
+}
+
+.css{
+  width: 75%;
+}
+
+.js{
+  width: 65%;
+}
+
+.html[data-scroll="in"]{
+  animation: html 2s;
+}
+
+.css[data-scroll="in"]{
+  animation: css 2s;
+}
+
+.js[data-scroll="in"]{
+  animation: js 2s;
+}
+
+@keyframes html{
+  0%{
+    width: 0;
+  }
+  
+  100%{
+    width: 90%;
+  }
+}
+
+@keyframes css{
+  0%{
+    width: 0;
+  }
+  
+  100%{
+    width: 75%;
+  }
+}
+
+@keyframes js{
+  0%{
+    width: 0;
+  }
+  
+  100%{
+    width: 65%;
+  }
+}
+
+.html[data-scroll="out"], .css[data-scroll="out"], .js[data-scroll="out"]{
+  opacity: 0;
+}
+
+footer{
+  background-color: #fbfafc;
+  padding: 40px;
+}
+
+footer h1{
+  line-height: 35px;
+}
+
+footer p{
+  font-size: 15px;
+  padding-block: 5px;
+}
+
+form{
+  margin-top: 20px;
+}
+
+input, textarea{
+  margin-block: 10px;
+  padding: 10px;
+  width: 100%;
+  height: 40px;
+  border: 2px solid #e3e1e8;
+  border-radius: 10px;
+  outline: none; 
+  transition: border 0.5s ease-out;
+}
+
+textarea{
+  height: 80px;
+}
+
+input:hover, textarea:hover{
+  border: 2px solid #7d2cd4;
+}
+
+button{
+  height: 40px;
+  width: 90px;
+  border: none;
+  border-radius: 20px;
+  background-color: #7d2cd4;
+  color: #fff;
+}
+
+.links{
+ padding-block: 20px;
+}
+
+.links i{
+  padding: 10px;
+  color: #000;
+}
+
+h1[data-scroll="in"], h2[data-scroll="in"], li[data-scroll="in"], p[data-scroll="in"], form[data-scroll="in"], i[data-scroll="in"]{
+  animation: myAnimation 1s;
+}
+
+ h1[data-scroll="out"], #myName[data-scroll="in"], h2[data-scroll="out"], li[data-scroll="out"], p[data-scroll="out"], form[data-scroll="out"], i[data-scroll="out"]{
+    opacity: 0;
+} 
+
+@keyframes myAnimation{
+  0%{
+    opacity: 0;
+    transform: translate(0px, 20px);
+  }
+  
+  100%{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  
+ .menu{
+  right: 100px;
+  padding-inline: 40px;
+  }
+  
+ .menu .top{
+  height: 8px;
+  width: 70px;
+  border-radius: 4px;
+  top: 16px;
+ }
+
+ .menu .middle{
+  height: 8px;
+  width: 70px;
+  border-radius: 4px;
+ }
+
+ .menu .bottom{
+  height: 8px;
+  width: 70px;
+  border-radius: 4px;
+  bottom: 8px;
+ }
+
+ header div{
+  margin-top: 180px;
+  margin-left: 80px;
+  font-size: 30px;
+  line-height: 60px;
+ }
+
+ .about{
+  padding-inline: 80px;
+  height: 100vh;
+  width: 100vw;
+ }
+
+.about h1{
+  font-size: 50px;
+  padding: 20px;
+}
+
+.about p{
+  font-size: 30px;
+  padding: 20px;
+  line-height: 60px;
+}
+
+.skills{
+  padding-inline: 80px;
+}
+
+.skills h1{
+  font-size: 50px;
+}
+
+.skills li{
+  margin-block: 50px;
+  font-size: 30px;
+} 
+
+.skills .percentage{
+  margin-top: -40px; 
+} 
+
+.bar{
+  height: 30px;
+  
+}
+
+.bar span{
+  height: 30px;
+}
+
+footer{
+  padding-inline: 80px;
+}
+
+footer h1{
+  font-size: 50px;
+  line-height: 50px;
+}
+
+footer p{
+  font-size: 30px;
+  padding-block: 15px;
+}
+
+form{
+  margin-top: 30px;
+}
+
+input{
+  font-size: 30px;
+  margin: 5px;
+  width: 60%;
+  height: 80px;
+}
+
+form .id{
+  display: flex;
+}
+
+textarea{
+  height: 150px;
+  width: 100%;
+  font-size: 30px;
+}
+
+button{
+  height: 80px;
+  width: 180px;
+  border-radius: 40px;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.links{
+ font-size: 30px; 
+ }
+}
