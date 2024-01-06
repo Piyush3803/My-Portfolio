@@ -81,6 +81,20 @@ header{
   font-size: 20px;
 }
 
+svg{
+  position: absolute;
+  left: 50px; 
+  top: 100px;
+  z-index: 0;
+}
+
+.photo{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+}
+
+
 header span{
   color: #7d2cd4;
 }
@@ -295,9 +309,15 @@ h1[data-scroll="in"], h2[data-scroll="in"], li[data-scroll="in"], p[data-scroll=
   bottom: 8px;
  }
 
+svg{
+   padding: 20px;
+   width: 350px;
+   top: 350px;
+   left: 120px;
+ }
+
  header div{
-  margin-top: 180px;
-  margin-left: 80px;
+   margin-left: 350px;
   font-size: 30px;
   line-height: 60px;
  }
